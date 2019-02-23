@@ -7,8 +7,8 @@ node {
     sh "git rev-parse --short HEAD > commit-id"
 
     tag = readFile('commit-id').replace("\n", "").replace("\r", "")
-    appName = "hello-kenzan"
-    registryHost = "hub.docker.com"
+    appName = "hello"
+    registryHost = "itzprashanth"
     imageName = "${registryHost}${appName}:${tag}"
     env.BUILDIMG=imageName
 
